@@ -31,7 +31,7 @@ void quickSort(vector <int> &arr, int st , int end){
 }
 
 
-int main(){
+int main(){     
 
     vector <int> arr = {5,2,6,4,1,3};
     quickSort(arr,0,arr.size()-1);
