@@ -41,3 +41,6 @@ int main() {
 
     return 0;
 }
+
+
+//Variation 1
