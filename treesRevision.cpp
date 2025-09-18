@@ -56,8 +56,8 @@ bool isSame (Node*p , Node*q){
 }
 
 
-bool isSubTree(Node * r , Node *sr){
-    if (r == NULL || sr = NULL){
+bool isSubTree(Node * r , Node * sr){
+    if (r == NULL || sr == NULL){
         return (r == sr);
     }
 
