@@ -1,17 +1,15 @@
 #include <iostream>
-#include <queue>
 using namespace std;
-
-
 class Node{
 public:
     int data;
-    Node * left;
     Node * right;
-Node (int d) {
-    data = d;
-    left = right = NULL;
-}
+    Node * left;
+
+    Node(int d){
+        data = d;
+        left = right = NULL;
+    }
 };
 
 Node* insertData(Node* root , int data){
@@ -42,42 +40,29 @@ void takeInput(Node* &root){
 
 }
 
-void levelorder(Node *root){
-    queue <Node *> q;
-    q.push(root);
-    q.push(NULL);
+bool search(Node* root, int x) {
 
-    while (q.size() > 0){
-        Node *curr = q.front();
-        q.pop();
-
-        if (curr == NULL){
-            if(q.empty()){
-                break;
-            }
-            else{
-
-                cout << endl;
-                q.push(NULL);
-                continue;
-            }
-        }
-
-        cout << curr->data<<" ";
-
-        if (curr->left != NULL) q.push(curr->left);
-        if (curr->right != NULL) q.push(curr->right);
-
-
+    
+    if (root == NULL) return false;
+    
+    if (root->data == x) return true;
+    
+    if (root->data > x){
+        return search (root->left , x);
+    }
+    
+    else {
+        return search (root->right , x);
     }
 }
-
 
 int main(){
     Node * root = NULL;
 
     cout << "Enter " << endl;
     takeInput(root);
-    levelorder(root);
+
+    bool ans = search(root, 15);
+    cout << ans;
     return 0;
 }
