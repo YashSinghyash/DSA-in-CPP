@@ -1,2 +1,48 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Icon files
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# Compiled binaries and object files
+*.out
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+*.exe
+
+# Debug symbols
+*.dSYM
+
+# IDE / editor files
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+
+# CMake / build folders
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+bin/
+Debug/
+Release/
+
+# Logs
+*.log
+
+# Backup files
+*~
 *.dSYM
 
