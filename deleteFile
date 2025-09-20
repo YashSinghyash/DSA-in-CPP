@@ -1,0 +1,13 @@
+ls *.cpp | sed 's/\.cpp$//' | while read f; do
+  if [ -f "$f" ]; then
+    rm "$f"
+  fi
+done
+
+show 
+
+ls *.cpp | sed 's/\.cpp$//' | while read f; do
+  if [ -f "$f" ]; then
+    echo "Would delete: $f"
+  fi
+done

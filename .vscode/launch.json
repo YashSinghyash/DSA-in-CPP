@@ -1,18 +1,18 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Run Active File",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "preLaunchTask": "Build and Run Active File"
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run a.out",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "Build Active File"
+        }
+    ]
 }
