@@ -14,24 +14,45 @@ struct TreeNode {
 };
   
 
+// class Solution {
+// public:
+//     TreeNode* helper(vector<int> preorder , int mini , int maxi , int &i){
+//         if (i >= preorder.size()) return NULL;
+//         if (preorder[i] < mini || preorder[i]>maxi) return NULL;
+
+//         TreeNode* root = new TreeNode(preorder[i]);
+//         i++;
+
+//         root->left= helper(preorder,mini,root->val,i);
+//         root->right=helper(preorder,root->val,maxi,i);
+//         return root;
+
+//     }
+//     TreeNode* bstFromPreorder(vector<int>& preorder) {
+//         int mini = INT_MIN;
+//         int maxi = INT_MAX;
+//         int i = 0;
+//         return helper(preorder,mini,maxi,i);
+//     }
+// };
+
 class Solution {
 public:
-    TreeNode* helper(vector<int> preorder , int mini , int maxi , int &i){
-        if (i >= preorder.size()) return NULL;
-        if (preorder[i] < mini || preorder[i]>maxi) return NULL;
+    TreeNode* helper(vector<int> preorder  , int maxi , int &i){
+        if (i >= preorder.size() || preorder[i]>maxi) return NULL;
 
         TreeNode* root = new TreeNode(preorder[i]);
         i++;
 
-        root->left= helper(preorder,mini,root->val,i);
-        root->right=helper(preorder,root->val,maxi,i);
+        root->left= helper(preorder,root->val,i);
+        root->right=helper(preorder,maxi,i);
         return root;
 
     }
     TreeNode* bstFromPreorder(vector<int>& preorder) {
-        int mini = INT_MIN;
+        
         int maxi = INT_MAX;
         int i = 0;
-        return helper(preorder,mini,maxi,i);
+        return helper(preorder,maxi,i);
     }
 };
