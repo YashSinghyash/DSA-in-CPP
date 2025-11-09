@@ -31,7 +31,7 @@ class Solution {
             
             //visited
             else {
-                low[node] = min(low[node], low[nbr]);
+                low[node] = min(low[node], disc[nbr]);
             }
             
         }
