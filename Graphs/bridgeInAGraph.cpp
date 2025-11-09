@@ -56,7 +56,7 @@ class Solution {
         
         vector<int>disc(V,0);
         vector<int>low(V,0);
-        int parent;
+        int parent = -1;
         vector<bool>vis(V,false);
         
         
