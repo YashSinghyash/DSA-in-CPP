@@ -9,7 +9,6 @@ using namespace std;
 class Solution {
   public:
     vector<int> dijkstra(int V, vector<vector<int>> &edges, int src) {
-        // create adjacency list
         
         vector <vector <pair <int,int>>> adj(V);
         for (int i = 0 ; i < edges.size() ;i++){

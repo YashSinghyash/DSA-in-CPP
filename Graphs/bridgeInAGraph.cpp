@@ -5,8 +5,6 @@ using namespace std;
 
 class Solution {
   public:
-    
-    
     bool dfs(int node , int parent , int &timer , vector<int>&disc , vector <int>&low , 
     vector<vector<int>>&adj , vector<bool>&vis , int c , int d ){
         vis[node] = true;
@@ -36,9 +34,7 @@ class Solution {
             
         }
         
-        return false;
-        
-        
+        return false;    
     }
     bool isBridge(int V, vector<vector<int>> &edges, int c, int d) {
         
@@ -51,7 +47,9 @@ class Solution {
             adj[node1].push_back(node2);
             adj[node2].push_back(node1);
         }
-        
+
+
+
         int timer = 0;
         
         vector<int>disc(V,0);
